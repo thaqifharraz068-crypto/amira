@@ -1,0 +1,148 @@
+/* Gaya Asas */
+body{
+  font-family: 'seoge UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-colour: #5c4d4d;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 30px;
+  borde-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.05);
+}
+
+/* Bahagian Atas / Header */
+header{
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px dashed #f5cac3;
+  padding-bottom: 20px;
+}
+
+.flower-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+  color: #f28482;
+}
+
+.date {
+  font-style: italic;
+  color: #a78a7f;
+}
+
+/* Gaya Borang */
+h3 {
+  color: #84a59d;
+  border-left: 4px solid #f28482;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input, textarea {
+  width: 100;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  transition: all 0.3s;
+}
+
+input:focus, texarea:focus {
+  outline:none;
+  border-color: #f284882;
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-colour: #f28482;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #f5cac3;
+  color: #5c4d4d;
+}
+
+/* Senarai Ucapan */
+.wishes-section {
+  margin-top: 40px;
+}
+
+#wishesContainer {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.wish-card {
+  background: #fdf8f5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border-lest: 3px  solid #84a59d;
+  animation: fadeIn o.5s ease-in;
+}
+
+.wish-name {
+  font-weight: bold;
+  color: #f28482;
+  margin-bottom: 5px;
+}
+
+.wish-text {
+  margin: 0;
+  font-size: 0,95rem;
+  line-height: 1.4;
+}
+
+.loading {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
