@@ -1,8 +1,7 @@
-// Mengambil elemen daripada HTML
 const wishForm = document.getElementById('wishForm');
 const wishesContainer = document.getElementById('wishesContainer');
 
-// 1. Fungsi Hantar Ucapan ke Firebase
+// 1. Fungsi Menghantar Ucapan Ke Firebase
 wishForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -17,15 +16,15 @@ wishForm.addEventListener('submit', function(e) {
         }).then(() => {
             wishForm.reset();
         }).catch((error) => {
-            alert("Gagal menghantar ucapan. Sila cuba lagi.");
+            alert("Gagal menghantar ucapan. Sila semak sambungan internet.");
             console.error(error);
         });
     }
 });
 
-// 2. Fungsi Membaca Ucapan Secara Realtime dari Firebase
+// 2. Fungsi Mengambil Dan Memaparkan Ucapan Secara Live
 database.ref('ucapan').on('value', (snapshot) => {
-    wishesContainer.innerHTML = ''; // Kosongkan bekas kontena
+    wishesContainer.innerHTML = ''; 
     
     const data = snapshot.val();
     
@@ -34,8 +33,10 @@ database.ref('ucapan').on('value', (snapshot) => {
         return;
     }
 
-    // Paparkan ucapan
-    Object.keys(data).forEach(key => {
+    // Susun susunan ucapan supaya yang terbaru berada di atas sekali
+    const keys = Object.keys(data).reverse();
+    
+    keys.forEach(key => {
         const item = data[key];
         const card = document.createElement('div');
         card.className = 'wish-card';
