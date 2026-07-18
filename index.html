@@ -1,0 +1,49 @@
+<!DOCKTYPE html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="witdh=device-width, initial-scale=1.0">
+    <title>Ucapan Perkahwinan Izwan & Amira</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="flower-icon">🌺</div>
+        <h1>Walimatulurus</h1>
+        <h2>Izwan & Amira</h2>
+        <p class="date">Sabtu,19 Desember 2026</p>
+      </header>
+      <main>
+        <section class="form-section">
+          <h3>Titipkan Ucapan & Doa Restu</h3>
+          <form id="wishForm">
+            <div class="input-group">
+              <label for="guestName">Nama Anda</label>
+              <input type="text" id=guestName" placeholder-"Masukkan nama anda" required>
+            </div>
+            <div class="input-group">
+              <label for="guestMessage">Ucapan / Doa</label>
+              <textarea id="guestMessage" rows="4" placeholder="Tuliskan ucapan dan doa buat kedua pengantin..." required></textarea>
+            </div>
+            <button type="submit" id="submitBtn">Hantar Ucapan</button>
+          </form>
+        </section>
+
+        <section class="wishes-section">
+          <h3>Senarai Ucapan Tetamu</h3>
+          <div id="wishesContainer">
+            <p class="loading">Memuatkan ucapan...</p>
+          </div>
+        </section>
+      </main>
+
+    </footer>
+    </div>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
